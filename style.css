@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100vw;
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(50rem auto);
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven";
+}
+
+#one {
+  grid-area: one;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  gap: 0.5rem;
+  color: white;
+  grid-template-areas:
+    ". . . . . .  . . one_1 one_1 one_1 ."
+    ". one_2 one_2 one_3 one_3 one_3 one_3 one_3 one_3 one_3 one_3 ."
+    ". one_4 one_4 one_4 one_4 . . one_5 one_5 one_5 one_5 . ";
+}
+
+#one_1 {
+  grid-area: one_1;
+}
+
+#one_2 {
+  grid-area: one_2;
+}
+
+#one_3 {
+  grid-area: one_3;
+}
+
+#one_4 {
+  grid-area: one_4;
+}
+
+#one_5 {
+  grid-area: one_5;
+}
+
+div[id] {
+  border: 1px solid #333;
+}
+
+#two {
+  grid-area: two;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  color: #333;
+  gap: 1rem;
+  grid-template-areas:
+    ". two_1 two_1 two_1 two_1 . . two_2 two_2 two_2 . ."
+    ". two_1 two_1 two_1 two_1 . . two_3 two_3 two_3 two_3 ."
+    ". two_1 two_1 two_1 two_1 . . two_4 two_4 two_4 . . ";
+}
+
+#two_1 {
+  grid-area: two_1;
+}
+
+#two_2 {
+  grid-area: two_2;
+}
+
+#two_3 {
+  grid-area: two_3;
+}
+
+#two_4 {
+  grid-area: two_4;
+}
+
+#two_5 {
+  grid-area: two_5;
+}
+
+#three {
+  grid-area: three;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  color: #333;
+  gap: 1rem;
+  grid-template-areas:
+    ". . . . three_1 three_1 three_1 three_1 . . . ."
+    ". . . . three_2 three_2 three_2 three_2 . . . ."
+    ". . . . . three_3 three_3 . . . . ."
+    ". . three_4 three_4 three_4 . . three_5 three_5 three_5 . .";
+}
+
+#three_1 {
+  grid-area: three_1;
+}
+
+#three_2 {
+  grid-area: three_2;
+}
+
+#three_3 {
+  grid-area: three_3;
+}
+
+#three_4 {
+  grid-area: three_4;
+}
+
+#three_5 {
+  grid-area: three_5;
+}
+
+#four {
+  grid-area: four;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  color: #333;
+  gap: 1rem;
+  grid-template-areas:
+    ". four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1  ."
+    ". . four_2 four_2 four_3 four_3 four_4 four_4  . ."
+    ". . four_5 four_5 four_5 four_5 four_5 four_5  .  .";
+}
+
+#four_1 {
+  grid-area: four_1;
+}
+
+#four_2 {
+  grid-area: four_2;
+}
+
+#four_3 {
+  grid-area: four_3;
+}
+
+#four_4 {
+  grid-area: four_4;
+}
+
+#four_5 {
+  grid-area: four_5;
+}
+
+#five {
+  grid-area: five;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  color: #333;
+  gap: 1rem;
+  grid-template-areas:
+    ". five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 ."
+    ". . five_2 five_2 five_3 five_3 five_4 five_4 . .";
+}
+
+#five_1 {
+  grid-area: five_1;
+}
+
+#five_2 {
+  grid-area: five_2;
+}
+
+#five_3 {
+  grid-area: five_3;
+}
+
+#five_4 {
+  grid-area: five_4;
+}
+
+#six {
+  grid-area: six;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  color: #333;
+  gap: 1rem;
+  grid-template-areas:
+    ". six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 . "
+    ". . six_2 six_3 six_4 six_5 six_6 six_7 . .";
+}
+
+#six_1 {
+  grid-area: six_1;
+}
+
+#six_2 {
+  grid-area: six_2;
+}
+
+#six_3 {
+  grid-area: six_3;
+}
+
+#six_4 {
+  grid-area: six_4;
+}
+
+#six_5 {
+  grid-area: six_5;
+}
+
+#six_6 {
+  grid-area: six_6;
+}
+
+#six_7 {
+  grid-area: six_7;
+}
+
+#seven {
+  grid-area: seven;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30rem auto);
+  color: #333;
+  gap: 1rem;
+  grid-template-areas:
+    ". . seven_1 . seven_2 seven_2 seven_2 . seven_3 seven_3 . ."
+    ". . seven_4 . seven_2 seven_2 seven_2 . seven_3 seven_3 . ."
+    ". . seven_5 seven_5 seven_5 . . . . . . ."
+    ". . seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 . ."
+    ". . . . . . . . . seven_7 . .";
+}
+
+#seven_1 {
+  grid-area: seven_1;
+}
+
+#seven_2 {
+  grid-area: seven_2;
+}
+
+#seven_3 {
+  grid-area: seven_3;
+}
+
+#seven_4 {
+  grid-area: seven_4;
+}
+
+#seven_5 {
+  grid-area: seven_5;
+}
+
+#seven_6 {
+  grid-area: seven_6;
+}
+
+#seven_7 {
+  grid-area: seven_7;
+}
