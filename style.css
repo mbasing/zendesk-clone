@@ -10,7 +10,7 @@ html {
 .container {
   width: 100vw;
   display: grid;
-  gap: 1rem;
+  /* gap: 1rem; */
 
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(50rem auto);
@@ -30,44 +30,136 @@ html {
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(30rem auto);
   gap: 0.5rem;
-  color: white;
+  background-color: teal;
   grid-template-areas:
-    ". . . . . .  . . one_1 one_1 one_1 ."
+    ". . . . . .  . one_1 one_1 one_1 one_1 ."
     ". one_2 one_2 one_3 one_3 one_3 one_3 one_3 one_3 one_3 one_3 ."
     ". one_4 one_4 one_4 one_4 . . one_5 one_5 one_5 one_5 . ";
 }
 
 #one_1 {
   grid-area: one_1;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+#one_1 ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+#one_1 ul li {
+  padding: 1px 1.5rem;
+
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 #one_2 {
   grid-area: one_2;
+  padding-top: 1rem;
+}
+
+#one_2 img {
+  height: 1.5rem;
 }
 
 #one_3 {
   grid-area: one_3;
 }
 
+#one_3 ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+#one_3 ul li {
+  align-self: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#one_3 ul button {
+  color: teal;
+  background-color: white;
+  outline: 0;
+  border: 0;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
 #one_4 {
   grid-area: one_4;
+  padding-bottom: 10rem;
+}
+
+#one_4 span {
+  border-bottom: 3px solid white;
+  padding-bottom: 1rem;
+}
+
+#one_4 h1 {
+  font-size: 7rem;
+}
+
+#one_4 h1:nth-child(1) {
+  color: white;
+}
+
+#one_4 h1:nth-child(2) {
+  color: dodgerblue;
+}
+
+#one_4 h1:nth-child(3) {
+  color: tomato;
 }
 
 #one_5 {
   grid-area: one_5;
+  padding-top: 5rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
 }
 
-div[id] {
+#free_trial {
+  background-color: orangered;
+  outline: 0;
+  border: 0;
+  margin-top: 5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+#view_demo {
+  background-color: teal;
+  border: 2px solid orangered;
+  outline: 0;
+  cursor: pointer;
+}
+
+#one_5 button {
+  width: 12rem;
+  padding: 1.3rem 2rem;
+  color: white;
+}
+
+#seven div[id] {
   border: 1px solid #333;
 }
 
 #two {
   grid-area: two;
   display: grid;
+  background-color: bisque;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(30rem auto);
+  grid-auto-rows: minmax(10rem auto);
   color: #333;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas:
     ". two_1 two_1 two_1 two_1 . . two_2 two_2 two_2 . ."
     ". two_1 two_1 two_1 two_1 . . two_3 two_3 two_3 two_3 ."
@@ -76,18 +168,74 @@ div[id] {
 
 #two_1 {
   grid-area: two_1;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+#promo-main {
+  width: 40rem;
+}
+
+#screen-promo {
+  width: 30rem;
+  position: absolute;
+  top: -4rem;
+  left: -5rem;
+}
+
+#sticker-star {
+  width: 14rem;
+  position: absolute;
+  top: -14rem;
+  left: -8rem;
 }
 
 #two_2 {
   grid-area: two_2;
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0;
 }
 
 #two_3 {
   grid-area: two_3;
+  color: #444;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
 }
 
 #two_4 {
   grid-area: two_4;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+#two_4 ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#two_4 ul li {
+  padding-right: 2rem;
+}
+
+#watch_video a {
+  border-bottom: 2px solid darkcyan;
+}
+
+#get_details a {
+  border-bottom: 2px solid darkcyan;
+}
+
+#two_4 ul li a {
+  color: darkcyan;
 }
 
 #two_5 {
@@ -100,7 +248,7 @@ div[id] {
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(30rem auto);
   color: #333;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas:
     ". . . . three_1 three_1 three_1 three_1 . . . ."
     ". . . . three_2 three_2 three_2 three_2 . . . ."
@@ -112,20 +260,106 @@ div[id] {
   grid-area: three_1;
 }
 
+#three_1 p {
+  color: teal;
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
 #three_2 {
   grid-area: three_2;
+  padding-bottom: 2rem;
+}
+
+#three_2 p {
+  color: teal;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 #three_3 {
   grid-area: three_3;
 }
 
+#three_3 ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#three_3 ul li {
+  list-style-type: none;
+  padding: 0.8rem 1rem;
+}
+
+#three_3 ul li a {
+  color: #444;
+}
+
+#three_3 ul li:first-child {
+  border-bottom: 2px solid teal;
+}
+
 #three_4 {
   grid-area: three_4;
+  padding-top: 2rem;
+}
+
+#three_4 h2 {
+  color: teal;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#three_4_customers {
+  font-size: 1.5rem;
+  color: teal;
+  margin-bottom: 2rem;
+}
+
+#three_4 li {
+  color: teal;
+  font-size: 1.2rem;
+  font-weight: 600;
+  list-style: none;
+  border-bottom: 2px solid teal;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.testimonial {
+  margin-left: 2rem;
+  border-left: 2px solid teal;
+  padding-left: 2rem;
+}
+
+.quote p {
+  color: teal;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.three_4_message {
+  font-size: 1.5rem;
+  color: teal;
+  margin-bottom: 1rem;
+}
+
+.three_4_user {
+  font-size: 1.5rem;
+  color: teal;
+  margin-bottom: 1.5rem;
 }
 
 #three_5 {
   grid-area: three_5;
+  border: 1px solid red;
 }
 
 #four {
@@ -134,7 +368,8 @@ div[id] {
   grid-template-columns: repeat(10, 1fr);
   grid-auto-rows: minmax(30rem auto);
   color: #333;
-  gap: 1rem;
+  margin-top: 5rem;
+  /* gap: 1rem; */
   grid-template-areas:
     ". four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1  ."
     ". . four_2 four_2 four_3 four_3 four_4 four_4  . ."
@@ -167,7 +402,7 @@ div[id] {
   grid-template-columns: repeat(10, 1fr);
   grid-auto-rows: minmax(30rem auto);
   color: #333;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas:
     ". five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 ."
     ". . five_2 five_2 five_3 five_3 five_4 five_4 . .";
@@ -195,7 +430,7 @@ div[id] {
   grid-template-columns: repeat(10, 1fr);
   grid-auto-rows: minmax(30rem auto);
   color: #333;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas:
     ". six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 . "
     ". . six_2 six_3 six_4 six_5 six_6 six_7 . .";
@@ -235,7 +470,7 @@ div[id] {
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(30rem auto);
   color: #333;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas:
     ". . seven_1 . seven_2 seven_2 seven_2 . seven_3 seven_3 . ."
     ". . seven_4 . seven_2 seven_2 seven_2 . seven_3 seven_3 . ."
