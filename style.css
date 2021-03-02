@@ -28,20 +28,20 @@ html {
   grid-area: one;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(5rem, auto);
+  grid-auto-rows: minmax(2rem, auto);
   gap: 0.5rem;
-  /* padding: ; */
+  height: 100vh;
   background-color: #17494d;
   grid-template-areas:
-    ". . . . . .  one_1 one_1 one_1 one_1 . ."
-    ". . one_2 one_3 one_3 one_3 one_3 one_3 one_3 one_3 . ."
-    ". . one_4 one_4 one_4 one_4 one_5 one_5 one_5 one_5 . . ";
+    ". . . . . .  one_1 one_1 one_1 one_1 one_1 ."
+    ". one_2 one_2 one_3 one_3 one_3 one_3 one_3 one_3 one_3 one_3 ."
+    ". one_4 one_4 one_4 one_4 one_4 one_5 one_5 one_5 one_5 one_5 . ";
 }
 
 #one_1 {
   grid-area: one_1;
   padding-top: 1rem;
-  margin-bottom: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 #one_1 ul {
   list-style-type: none;
@@ -50,27 +50,34 @@ html {
 }
 #one_1 ul li {
   padding: 1px 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
+#one_1 ul li a:hover {
+  border-bottom: 1px solid white;
+}
 a {
   text-decoration: none;
   color: white;
+  display: inline-block;
 }
 
 #one_2 {
   grid-area: one_2;
-  padding-top: 3rem;
+  padding-top: 2rem;
+  color: white;
 }
 
-#one_2 img {
-  height: 2rem;
+#one_2 a {
+  font-size: 2.5rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #one_3 {
   grid-area: one_3;
-  margin-top: 2rem;
-  margin-bottom: 15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 10rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #one_3 ul {
@@ -82,12 +89,19 @@ a {
 #one_3 ul li {
   align-self: center;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+}
+
+#one_3 ul li a:hover {
+  padding-bottom: 2rem;
+  border-bottom: 2px solid white;
 }
 
 #one_3 ul button {
-  color: teal;
-  background-color: white;
+  color: #444;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: #ece0ce;
   outline: 0;
   border: 0;
   padding: 1.5rem;
@@ -99,20 +113,21 @@ a {
   grid-area: one_4;
   padding-bottom: 3rem;
   margin-bottom: 12rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #one_4 h1 {
-  font-size: 8rem;
+  font-size: 7rem;
   color: #ce9fb7;
 }
 
 #one_4 span {
-  font-size: 8rem;
+  font-size: 7rem;
   margin-right: 1rem;
 }
 
 #one_4 p {
-  font-size: 8rem;
+  font-size: 7rem;
 }
 
 #one_4 span:first-of-type {
@@ -140,21 +155,26 @@ a {
   padding: 5rem 5rem 5rem 10rem;
   margin-bottom: 10rem;
   color: white;
-  font-weight: 600;
 }
 
 #one_5 p {
-  font-size: 2rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #free_trial {
-  background-color: orangered;
+  background-color: #ff6224;
   outline: 0;
   border: 0;
   color: white;
   margin-top: 5rem;
   margin-right: 1rem;
   cursor: pointer;
+}
+
+#free_trial:hover {
+  background-color: orangered;
 }
 
 #one_5 button {
@@ -166,10 +186,15 @@ a {
 
 #view_demo {
   background-color: #17494d;
-  border: 2px solid orangered;
-  color: orangered;
+  border: 2px solid #ff6224;
+  color: #ff6224;
   outline: 0;
   cursor: pointer;
+}
+
+#view_demo:hover {
+  background-color: #ff6224;
+  color: white;
 }
 
 /* div[id] {
@@ -182,11 +207,12 @@ a {
   background-color: #fed6a8;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(5rem, auto);
+  padding-top: 0.8rem;
   /* gap: 1rem; */
   grid-template-areas:
-    ". . two_1 two_1 two_1 two_1 two_2 two_2 two_2 two_2 . ."
-    ". . two_1 two_1 two_1 two_1 two_3 two_3 two_3 two_3 . ."
-    ". . two_1 two_1 two_1 two_1 two_4 two_4 two_4 two_4 . . ";
+    ". two_1 two_1 two_1 two_1 two_1 two_2 two_2 two_2 two_2 two_2 ."
+    ". two_1 two_1 two_1 two_1 two_1 two_3 two_3 two_3 two_3 two_3 ."
+    ". two_1 two_1 two_1 two_1 two_1 two_4 two_4 two_4 two_4 two_4 . ";
 }
 
 #two_1 {
@@ -204,14 +230,14 @@ a {
 #screen-promo {
   width: 30rem;
   position: absolute;
-  top: -4rem;
-  left: -5rem;
+  top: -3rem;
+  left: -4rem;
 }
 
 #sticker-star {
   width: 14rem;
   position: absolute;
-  top: -14rem;
+  top: -12rem;
   left: -8rem;
 }
 
@@ -224,24 +250,27 @@ a {
   margin-bottom: 0;
   padding-left: 5rem;
   color: #17494d;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #two_3 {
   grid-area: two_3;
   color: #17494d;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  font-weight: 500;
   padding-left: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2.5rem;
 }
 
 #two_4 {
   grid-area: two_4;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 0;
   padding-left: 2rem;
+  transition: all 0.2s;
 }
 
 #two_4 ul {
@@ -249,16 +278,33 @@ a {
   list-style-type: none;
 }
 
+#two_4 ul i {
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  color: #444;
+}
+
 #two_4 ul li {
-  padding-right: 2rem;
+  padding-right: 1.5rem;
+}
+
+#arrow-right {
+  font-size: 1.5rem;
+}
+
+#arrow-right:hover {
+  transform: scale(1.1);
+  padding-left: 0.5rem;
 }
 
 #watch_video a {
   border-bottom: 2px solid #17494d;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #get_details a {
   border-bottom: 2px solid #17494d;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #two_4 ul li a {
@@ -276,52 +322,65 @@ a {
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   /* gap: 1rem; */
+  padding-bottom: 7rem;
+  margin-bottom: 5rem;
   grid-template-areas:
-    ". . . . three_1 three_1 three_1 three_1 . . . ."
-    ". . . . three_2 three_2 three_2 three_2 . . . ."
+    ". . . three_1 three_1 three_1 three_1 three_1 three_1 . . ."
+    ". . . three_2 three_2 three_2 three_2 three_2 three_2 . . ."
     ". . . . . three_3 three_3 . . . . ."
-    ". . three_4 three_4 three_4 . three_5 three_5 three_5 three_5 . .";
+    ". three_4 three_4 three_4 three_4 . three_5 three_5 three_5 three_5 . .";
 }
 
 #three_1 {
   grid-area: three_1;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 #three_1 p {
-  color: teal;
-  font-size: 2.7rem;
+  color: #03363d;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 4rem;
   font-weight: 600;
   text-align: center;
   padding-bottom: 2rem;
-  padding-top: 3rem;
 }
 
 #three_2 {
   grid-area: three_2;
   padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 #three_2 p {
-  color: teal;
+  color: #03363d;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #three_3 {
   grid-area: three_3;
+  margin-bottom: 3rem;
 }
 
 #three_3 ul {
   display: flex;
   justify-content: space-around;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #three_3 ul li {
   list-style-type: none;
   padding: 0.8rem 1rem;
+  margin-right: 2rem;
+}
+
+#three_3 ul li:last-of-type:hover {
+  border-bottom: 3px solid #3d8dae;
 }
 
 #three_3 ul li a {
@@ -329,7 +388,7 @@ a {
 }
 
 #three_3 ul li:first-child {
-  border-bottom: 2px solid teal;
+  border-bottom: 3px solid #3d8dae;
 }
 
 #three_4 {
@@ -338,112 +397,253 @@ a {
 }
 
 #three_4 h2 {
-  color: teal;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  color: #03363d;
+  font-size: 2.6rem;
+  margin-bottom: 2.2rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #three_4_customers {
   font-size: 1.5rem;
-  color: teal;
+  color: #03363d;
+  line-height: 1.6;
   margin-bottom: 2rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #three_4 li {
-  color: teal;
-  font-size: 1.2rem;
+  color: #03363d;
+  font-size: 1.9rem;
   font-weight: 600;
   list-style: none;
-  border-bottom: 2px solid teal;
+  line-height: 2.7rem;
+  border-bottom: 2px solid #03363d;
   display: inline-block;
   margin-bottom: 3rem;
 }
 
 .testimonial {
   margin-left: 2rem;
-  border-left: 2px solid teal;
+  border-left: 2px solid #03363d;
   padding-left: 2rem;
 }
 
 .quote p {
-  color: teal;
-  font-size: 1.3rem;
+  color: #03363d;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .three_4_message {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 1.3;
   color: teal;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .three_4_user {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: teal;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.3;
 }
 
 #three_5 {
   grid-area: three_5;
-  border: 1px solid red;
   border-bottom: 0;
+  position: relative;
 }
 #photo-service {
   max-width: 100%;
 }
 
 #screen-service {
-  width: 40rem;
+  width: 35rem;
   position: relative;
-  left: -10rem;
-  top: -30rem;
+  position: absolute;
+  right: 20rem;
+  top: 32rem;
 }
 
 #four {
   grid-area: four;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   margin-top: 5rem;
   /* gap: 1rem; */
   grid-template-areas:
-    ". four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1  ."
-    ". . four_2 four_2 four_3 four_3 four_4 four_4  . ."
-    ". . four_5 four_5 four_5 four_5 four_5 four_5  .  .";
+    "four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1  four_1 four_1"
+    ". four_2 four_2 four_2 four_3 four_3 four_3 four_4 four_4 four_4 ."
+    ". four_5 four_5 four_5 four_5 four_5 four_5 four_5 four_5 four_5 .";
 }
 
 #four_1 {
   grid-area: four_1;
+  height: 100vh;
+  margin-bottom: 10rem;
+  background-image: url(assets/bg-customize.webp);
+}
+
+.banner_text {
+  margin-top: 10rem;
+  padding: 6rem;
+  width: 45%;
+  height: 65%;
+  background-color: white;
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  left: 45%;
+  color: #03363d;
+}
+
+.banner_text h2 {
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.banner_text p {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  color: grey;
+  margin-bottom: 3rem;
+}
+
+.banner_text span ul {
+  /* border: 1px solid red; */
+  list-style-type: none;
+}
+
+.banner_text span ul a {
+  color: #03363d;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.banner_text span ul a i {
+  padding-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.banner_text span ul li {
+  border-bottom: 2px solid #03363d;
 }
 
 #four_2 {
   grid-area: four_2;
+  border-bottom: 2px solid #7d3d54;
 }
 
 #four_3 {
   grid-area: four_3;
+  border-bottom: 2px solid #3d8dae;
 }
 
 #four_4 {
   grid-area: four_4;
+  border-bottom: 2px solid #c38f00;
+}
+
+#four_2,
+#four_3,
+#four_4 {
+  margin-right: 2rem;
+  background-color: #f8f9f9;
+  padding: 3rem;
+}
+
+#four_2 p:first-of-type,
+#four_3 p:first-of-type,
+#four_4 p:first-of-type {
+  font-size: 1.4rem;
+  color: #4d595a;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+#four_2 p:last-of-type,
+#four_3 p:last-of-type,
+#four_4 p:last-of-type {
+  font-size: 1.5rem;
+  color: #666;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 10rem;
+}
+
+#four_2 a,
+#four_3 a,
+#four_4 a {
+  color: #17494d;
+  border-bottom: 2px solid #17494d;
+  /* display:flex; */
+  float: left;
+}
+
+#four_2 li,
+#four_3 li,
+#four_4 li {
+  list-style-type: none;
+  font-size: 1.4rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#four_2 div,
+#four_3 div,
+#four_4 div {
+  display: flex;
+}
+
+#four_2 div i,
+#four_3 div i,
+#four_4 div i {
+  padding-top: 0.2rem;
+  margin-left: 1rem;
+}
+
+#four_2 h3,
+#four_3 h3,
+#four_4 h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  color: #03363d;
+  margin-bottom: 3rem;
 }
 
 #four_5 {
   grid-area: four_5;
+  background-color: #d6eef2;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-top: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
+#four_5 p {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+#four_5 img {
+  width: 15rem;
+  height: 5rem;
+  padding-bottom: 2rem;
+}
 #five {
   grid-area: five;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   /* gap: 1rem; */
   grid-template-areas:
-    ". five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 ."
-    ". . five_2 five_2 five_3 five_3 five_4 five_4 . .";
+    ". five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 ."
+    ". five_2 five_2 five_2 five_3 five_3 five_3 five_4 five_4 five_4 .";
 }
 
 #five_1 {
@@ -452,6 +652,9 @@ a {
 
 #five_2 {
   grid-area: five_2;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #five_3 {
@@ -462,26 +665,102 @@ a {
   grid-area: five_4;
 }
 
+#five_3,
+#five_4 {
+  margin-bottom: 10rem;
+}
+
+#five_3 li,
+#five_4 li {
+  list-style-type: none;
+  font-size: 1.7rem;
+  line-height: 1.9;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #17494d;
+}
+
 #six {
   grid-area: six;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   background-color: #f8f9f9;
   padding-bottom: 5rem;
   /* gap: 1rem; */
   grid-template-areas:
-    ". six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 . "
-    ". . six_2 six_3 six_4 six_5 six_6 six_7 . .";
+    "six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1"
+    ".  six_2 six_2 six_3 six_3 six_4 six_4 six_5 six_5 six_6 six_6 six_7 six_7 .";
 }
 
 #six_1 {
   grid-area: six_1;
+  background-color: #d6eef2;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  margin-bottom: 10rem;
+}
+
+#six_1 h2 {
+  font-size: 4.5rem;
+  text-align: center;
+
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 4rem;
+}
+
+#six_1 div {
+  width: 50rem;
+  margin: 0 auto;
+  padding-left: 10rem;
+}
+
+#six_1 div button {
+  width: 15rem;
+  height: 5rem;
+  font-size: 1.7rem;
+  margin-right: 2rem;
+  border: 0;
+  outline: 0;
+  transition: all 0.2s;
+}
+
+#six_1 div button:first-of-type {
+  background-color: #17494d;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#six_1 div button:first-of-type:hover {
+  background-color: #03363d;
+}
+
+#six_1 div button:last-of-type {
+  background-color: #d6eef2;
+  border: 2px solid #245458;
+  font-weight: 600;
+}
+
+#six_1 div button:last-of-type:hover {
+  background-color: #012b30;
+  color: white;
 }
 
 #six_2 {
   grid-area: six_2;
+}
+
+#six_2 img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 0;
+}
+
+#six_2 h2 {
+  font-size: 2rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #six_3 {
@@ -504,6 +783,38 @@ a {
   grid-area: six_7;
 }
 
+#six_3,
+#six_4,
+#six_5,
+#six_6,
+#six_7 {
+  padding-top: 4rem;
+}
+
+#six_3 p,
+#six_4 p,
+#six_5 p,
+#six_6 p,
+#six_7 p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 1rem;
+}
+
+#six_3 ul,
+#six_4 ul,
+#six_5 ul,
+#six_6 ul,
+#six_7 ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: #666;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 #seven {
   grid-area: seven;
   display: grid;
@@ -513,10 +824,10 @@ a {
   background-color: #f8f9f9;
   gap: 1rem;
   grid-template-areas:
-    ". . seven_1 seven_1 seven_2 seven_2 seven_2 seven_2 seven_3 seven_3 . ."
-    ". . seven_4 seven_4 seven_2 seven_2 seven_2 seven_2 seven_3 seven_3 . ."
-    ". . seven_5 seven_5 seven_5 seven_5 . . . . . ."
-    ". . seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 . ."
+    ". seven_1 seven_1 seven_2 seven_2 seven_2 seven_2 seven_3 seven_3 seven_3 seven_3 ."
+    ".  seven_4 seven_4 seven_2 seven_2 seven_2 seven_2 seven_3 seven_3 seven_3 seven_3 ."
+    ". seven_5 seven_5 seven_5 seven_5 seven_5 seven_5 . . . . ."
+    ". seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 seven_6 ."
     ". . . . . . . . . seven_7 seven_7 .";
 }
 
@@ -558,12 +869,14 @@ a {
 #seven_3 ul {
   list-style-type: none;
   display: flex;
-  padding-top: 2rem;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 #seven_3 ul li a {
   font-size: 2rem;
-  margin-right: 2.5rem;
+  margin-right: 3rem;
   color: #6c737d;
 }
 
