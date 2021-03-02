@@ -294,7 +294,7 @@ a {
 
 #arrow-right:hover {
   transform: scale(1.1);
-  margin-left: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 #watch_video a {
@@ -321,8 +321,9 @@ a {
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
-  border: 1px solid red;
   /* gap: 1rem; */
+  padding-bottom: 7rem;
+  margin-bottom: 5rem;
   grid-template-areas:
     ". . . three_1 three_1 three_1 three_1 three_1 three_1 . . ."
     ". . . three_2 three_2 three_2 three_2 three_2 three_2 . . ."
@@ -354,8 +355,9 @@ a {
 #three_2 p {
   color: #03363d;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #three_3 {
@@ -450,64 +452,198 @@ a {
 
 #three_5 {
   grid-area: three_5;
-  border: 1px solid red;
   border-bottom: 0;
+  position: relative;
 }
 #photo-service {
   max-width: 100%;
 }
 
 #screen-service {
-  width: 40rem;
+  width: 35rem;
   position: relative;
-  left: -10rem;
-  top: -30rem;
+  position: absolute;
+  right: 20rem;
+  top: 32rem;
 }
 
 #four {
   grid-area: four;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   margin-top: 5rem;
   /* gap: 1rem; */
   grid-template-areas:
-    ". four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1  ."
-    ". . four_2 four_2 four_3 four_3 four_4 four_4  . ."
-    ". . four_5 four_5 four_5 four_5 four_5 four_5  .  .";
+    "four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1 four_1  four_1 four_1"
+    ". four_2 four_2 four_2 four_3 four_3 four_3 four_4 four_4 four_4 ."
+    ". four_5 four_5 four_5 four_5 four_5 four_5 four_5 four_5 four_5 .";
 }
 
 #four_1 {
   grid-area: four_1;
+  height: 100vh;
+  margin-bottom: 10rem;
+  background-image: url(assets/bg-customize.webp);
+}
+
+.banner_text {
+  margin-top: 10rem;
+  padding: 6rem;
+  width: 45%;
+  height: 65%;
+  background-color: white;
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  left: 45%;
+  color: #03363d;
+}
+
+.banner_text h2 {
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.banner_text p {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  color: grey;
+  margin-bottom: 3rem;
+}
+
+.banner_text span ul {
+  /* border: 1px solid red; */
+  list-style-type: none;
+}
+
+.banner_text span ul a {
+  color: #03363d;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.banner_text span ul a i {
+  padding-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.banner_text span ul li {
+  border-bottom: 2px solid #03363d;
 }
 
 #four_2 {
   grid-area: four_2;
+  border-bottom: 2px solid #7d3d54;
 }
 
 #four_3 {
   grid-area: four_3;
+  border-bottom: 2px solid #3d8dae;
 }
 
 #four_4 {
   grid-area: four_4;
+  border-bottom: 2px solid #c38f00;
+}
+
+#four_2,
+#four_3,
+#four_4 {
+  margin-right: 2rem;
+  background-color: #f8f9f9;
+  padding: 3rem;
+}
+
+#four_2 p:first-of-type,
+#four_3 p:first-of-type,
+#four_4 p:first-of-type {
+  font-size: 1.4rem;
+  color: #4d595a;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+#four_2 p:last-of-type,
+#four_3 p:last-of-type,
+#four_4 p:last-of-type {
+  font-size: 1.5rem;
+  color: #666;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 10rem;
+}
+
+#four_2 a,
+#four_3 a,
+#four_4 a {
+  color: #17494d;
+  border-bottom: 2px solid #17494d;
+  /* display:flex; */
+  float: left;
+}
+
+#four_2 li,
+#four_3 li,
+#four_4 li {
+  list-style-type: none;
+  font-size: 1.4rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#four_2 div,
+#four_3 div,
+#four_4 div {
+  display: flex;
+}
+
+#four_2 div i,
+#four_3 div i,
+#four_4 div i {
+  padding-top: 0.2rem;
+  margin-left: 1rem;
+}
+
+#four_2 h3,
+#four_3 h3,
+#four_4 h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  color: #03363d;
+  margin-bottom: 3rem;
 }
 
 #four_5 {
   grid-area: four_5;
+  background-color: #d6eef2;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-top: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
+#four_5 p {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+#four_5 img {
+  width: 15rem;
+  height: 5rem;
+  padding-bottom: 2rem;
+}
 #five {
   grid-area: five;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   /* gap: 1rem; */
   grid-template-areas:
-    ". five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 ."
-    ". . five_2 five_2 five_3 five_3 five_4 five_4 . .";
+    ". five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 five_1 ."
+    ". five_2 five_2 five_2 five_3 five_3 five_3 five_4 five_4 five_4 .";
 }
 
 #five_1 {
@@ -516,6 +652,9 @@ a {
 
 #five_2 {
   grid-area: five_2;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #five_3 {
@@ -526,26 +665,102 @@ a {
   grid-area: five_4;
 }
 
+#five_3,
+#five_4 {
+  margin-bottom: 10rem;
+}
+
+#five_3 li,
+#five_4 li {
+  list-style-type: none;
+  font-size: 1.7rem;
+  line-height: 1.9;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #17494d;
+}
+
 #six {
   grid-area: six;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   grid-auto-rows: minmax(5rem, auto);
   color: #333;
   background-color: #f8f9f9;
   padding-bottom: 5rem;
   /* gap: 1rem; */
   grid-template-areas:
-    ". six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 . "
-    ". . six_2 six_3 six_4 six_5 six_6 six_7 . .";
+    "six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1 six_1"
+    ".  six_2 six_2 six_3 six_3 six_4 six_4 six_5 six_5 six_6 six_6 six_7 six_7 .";
 }
 
 #six_1 {
   grid-area: six_1;
+  background-color: #d6eef2;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  margin-bottom: 10rem;
+}
+
+#six_1 h2 {
+  font-size: 4.5rem;
+  text-align: center;
+
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 4rem;
+}
+
+#six_1 div {
+  width: 50rem;
+  margin: 0 auto;
+  padding-left: 10rem;
+}
+
+#six_1 div button {
+  width: 15rem;
+  height: 5rem;
+  font-size: 1.7rem;
+  margin-right: 2rem;
+  border: 0;
+  outline: 0;
+  transition: all 0.2s;
+}
+
+#six_1 div button:first-of-type {
+  background-color: #17494d;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#six_1 div button:first-of-type:hover {
+  background-color: #03363d;
+}
+
+#six_1 div button:last-of-type {
+  background-color: #d6eef2;
+  border: 2px solid #245458;
+  font-weight: 600;
+}
+
+#six_1 div button:last-of-type:hover {
+  background-color: #012b30;
+  color: white;
 }
 
 #six_2 {
   grid-area: six_2;
+}
+
+#six_2 img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 0;
+}
+
+#six_2 h2 {
+  font-size: 2rem;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #six_3 {
@@ -566,6 +781,38 @@ a {
 
 #six_7 {
   grid-area: six_7;
+}
+
+#six_3,
+#six_4,
+#six_5,
+#six_6,
+#six_7 {
+  padding-top: 4rem;
+}
+
+#six_3 p,
+#six_4 p,
+#six_5 p,
+#six_6 p,
+#six_7 p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 1rem;
+}
+
+#six_3 ul,
+#six_4 ul,
+#six_5 ul,
+#six_6 ul,
+#six_7 ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: #666;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 #seven {
