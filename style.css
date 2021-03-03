@@ -33,7 +33,7 @@ html {
   height: 100vh;
   background-color: #17494d;
   grid-template-areas:
-    ". . . . . .  one_1 one_1 one_1 one_1 one_1 ."
+    ". . . . . one_1 one_1 one_1 one_1 one_1 one_1 ."
     ". one_2 one_2 one_3 one_3 one_3 one_3 one_3 one_3 one_3 one_3 ."
     ". one_4 one_4 one_4 one_4 one_4 one_5 one_5 one_5 one_5 one_5 . ";
 }
@@ -47,6 +47,7 @@ html {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
+  white-space: nowrap;
 }
 #one_1 ul li {
   padding: 1px 1.5rem;
@@ -1028,4 +1029,80 @@ a {
 #seven_7 button i {
   font-size: 1.8rem;
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #one {
+    grid-area: one;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(2rem, auto);
+    gap: 0.5rem;
+    height: 100vh;
+    background-color: #17494d;
+    grid-template-areas:
+      "one_2"
+      "one_4"
+      "one_5";
+  }
+
+  #one_2 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  #one_4 {
+    width: 100vw;
+    text-align: center;
+    padding-right: 1rem;
+  }
+  #one_5 {
+    grid-area: one_5;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    color: white;
+  }
+
+  #two {
+    grid-area: two;
+    display: grid;
+    background-color: #fed6a8;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(5rem, auto);
+    padding-top: 0.8rem;
+    grid-template-areas:
+      "two_2"
+      "two_1"
+      "two_3"
+      "two_4";
+  }
+
+  #two_2 {
+    text-align: center;
+    padding-left: 10rem;
+  }
+
+  #promo-main {
+    max-width: 50rem;
+    padding-left: 4rem;
+  }
+
+  #screen-promo {
+    width: 20rem;
+    padding-left:5rem;
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+  }
+
+  /* #sticker-star {
+    width: 10rem;
+    position: absolute;
+    top: -12rem;
+    left: -8rem;
+  } */
 }
