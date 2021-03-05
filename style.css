@@ -1031,6 +1031,16 @@ a {
   margin-right: 1rem;
 }
 
+#reference {
+  color: dodgerblue;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#reference i {
+  color: red;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     padding-left: 2rem;
@@ -1150,10 +1160,10 @@ a {
   #three_1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border:2px solid red;
-    width:50vw;
-    margin:0 auto;
-    padding-top:2rem;
+    border: 2px solid red;
+    width: 50vw;
+    margin: 0 auto;
+    padding-top: 2rem;
   }
 
   #three_1 p {
